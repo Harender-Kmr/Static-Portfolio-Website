@@ -8,13 +8,14 @@ function append(parent, child){
   return parent.appendChild(child)
 }
 
-var htmlElements = "";
-for (var i = 0; i < 3; i++) {
-   htmlElements += '<div class="box"></div>';
-}
-var container = document.getElementById("project-box");
-container.innerHTML = htmlElements;
+// var htmlElements = "";
+// for (var i = 0; i < 3; i++) {
+//    htmlElements += '<div class="box"></div>';
+// }
+// var container = document.getElementById("project-box");
+// container.innerHTML = htmlElements;
 
+const ul = document.getElementById('git-api')
 
 // const ul = document.getElementsByClassName('box')
 
@@ -24,16 +25,18 @@ fetch('https://api.github.com/users/Harender-Kmr/repos')
   let git = data;
   return git.map(function (Project){
     // console.log(git)
+
     let li = createNode('li');
     let name = createNode('name');
     let desc = createNode('desc')
+    console.log(git)
     
     name.innerHTML  = `${Project.name}`;
-      desc.innerHTML = `${Project.description}`;
+    // desc.innerHTML = `${Project.description}`;
 
-      append(li, name)
-      append(li, desc)
-      // append(ul,li)
+    append(li, name)
+    append(li, desc)
+    append(ul, li)
     })
   })
   

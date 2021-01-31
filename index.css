@@ -111,14 +111,14 @@ body {
     align-items: center;
 }
 
-.about #about-right span{
+.heading{
     font-family: 'Permanent Marker', cursive;
     font-weight: bold;
     font-size: 60px;
     padding-top: 60px;
 }
 
-.about #about-right .main_head{
+.main_head{
     display: flex;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 30px;
@@ -130,7 +130,7 @@ body {
 .about #about-right .sub{
     width: 700px;
     height: 300px;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     margin-top: 100px;
     margin-bottom: 100px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -142,59 +142,90 @@ body {
 
 
 /* .skills */
+
+
+
+#heading{
+    /* border: 2px solid red; */
+    text-align: center;
+    grid-area: header;
+    font-family: 'Permanent Marker', cursive;
+    font-weight: bold;
+    font-size: 60px;
+    padding-top: px;
+
+}
+#grid-1{
+    /* border: 2px solid red; */
+    grid-area: left-1;
+}
+#grid-2{
+    /* border: 2px solid red; */
+    grid-area: left-2;
+}
+#grid-3{
+    /* border: 2px solid red; */
+    grid-area: left-3;
+}
+#grid-4{
+    /* border: 2px solid red; */
+    grid-area: right-1;
+}
+#grid-5{
+    /* border: 2px solid red; */
+    grid-area: right-2;
+}
+#grid-6{
+    /* border: 2px solid red; */
+    grid-area: right-3;
+}
+
 .skills{
     height: 100vh;
     display: grid;
     grid-template-columns: 45% 45%;
+    grid-template-rows: 15% 25% 25% 25%;
     column-gap:10%;
-    row-gap: 8%;
-}
-
-#grid-1{
-    border: 2px solid red;
-}
-#grid-2{
-    border: 2px solid red;
-}
-#grid-3{
-    border: 2px solid red;
-}
-#grid-4{
-    border: 2px solid red;
-}
-#grid-5{
-    border: 2px solid red;
-}
-#grid-6{
-    border: 2px solid red;
+    /* row-gap: 15%; */
+    grid-template-areas:
+    "header header"
+    'left-1 right-1'
+    'left-2 right-2'
+    'left-3 right-3';
 }
 
 
-.work{
-    height: 100vh;
-}
 
 
 .work{
     display: flex;
-    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+    /* border: 2px solid red; */
 }
 
 
 /* work_project */
 #project-box{
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    /* border: 2px solid red; */
 }
 
-
-.box{
-    width: 400px;
-    height: 200px;
-    border: 2px solid red;
+.work #work-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid red; */
+    width: 50%;
 }
 
+#git-api{
+    display: flex;
+    flex-direction: column;
+}
 
 
 

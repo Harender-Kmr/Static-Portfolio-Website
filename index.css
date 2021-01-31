@@ -175,6 +175,27 @@ body {
 }
 
 
+.work{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* work_project */
+#project-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+.box{
+    width: 400px;
+    height: 200px;
+    border: 2px solid red;
+}
+
+
 
 
 /* Contact */
